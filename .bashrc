@@ -118,3 +118,4 @@ pastebin_function(){
 	"$1" | pastebinit
 }
 export TERM=xterm-256color
+export PS1="\[\e[0;33m\]\u@\h:\w$ \[\e[m\]"
