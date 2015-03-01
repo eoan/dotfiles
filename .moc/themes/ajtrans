@@ -1,0 +1,40 @@
+# Transparent background theme by meeeee
+
+colordef green = 1000 0 0
+
+background		= default		default
+frame			= blue		default
+window_title		= green		default
+directory		= black		default	bold
+selected_directory	= red		default	bold
+playlist		= green		default	bold
+selected_playlist	= red		default	bold
+file			= green 	default bold 
+selected_file		= red		default bold
+marked_file		= yellow	default	bold
+marked_selected_file	= yellow	blue	bold
+info			= green		default 
+selected_info		= red		default
+marked_info		= yellow	default bold
+marked_selected_info	= yellow	blue	bold
+status			= green		default
+title			= green 	default	bold
+state			= green		default	bold
+current_time		= green		default	bold
+time_left		= green		default	bold
+total_time		= green		default	bold
+time_total_frames	= green		default
+sound_parameters	= green		default	bold
+legend			= green		default
+disabled		= blue		default	bold
+enabled			= green		default	bold
+empty_mixer_bar		= green 	default
+filled_mixer_bar	= black		green dim 
+empty_time_bar		= green		default
+filled_time_bar		= black		green dim
+entry			= green		default
+entry_title		= black		green	
+error			= red		default	bold
+message			= green		default	bold
+plist_time		= green		default
+
