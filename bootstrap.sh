@@ -6,6 +6,7 @@ dir=~/dotfiles		# dotfiles directory
 olddir=~/dotfiles_old	# old dotfiles backup directory
 exdirs="
 	.config/awesome
+	.moc/themes
 	"		# list of extra directories to create
 files="
 	.bashrc
@@ -13,6 +14,8 @@ files="
 	.vimrc
 	.vim
 	.config/awesome/rc.lua
+	.moc/config
+	.moc/themes/ajtrans
 	"		# list of files/folders to symlink in homedir
 
 ##########
