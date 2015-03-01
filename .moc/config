@@ -69,7 +69,7 @@ ReadTags = yes
 #
 # Example:    MusicDir = "/home/joe/music"
 #
-MusicDir = "/home/aj/Music"
+MusicDir = ~/Music
 
 # Start in the music directory by default?  If set to 'no', start
 # in the current directory by default.  A single directory on
@@ -191,7 +191,7 @@ XTerms += eterm
 #
 # Example:    Theme = laras_theme
 #
-Theme = /home/aj/.moc/themes/ajtrans
+Theme = ~/.moc/themes/ajtrans
 
 # The theme used when running on an xterm.
 #
