@@ -191,7 +191,7 @@ XTerms += eterm
 #
 # Example:    Theme = laras_theme
 #
-Theme = ~/.moc/themes/ajtrans
+Theme = ajtrans
 
 # The theme used when running on an xterm.
 #
