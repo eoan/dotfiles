@@ -48,4 +48,7 @@ for file in $files; do
 	ln -s $dir/$file ~/$file
 done
 
+echo Go to https://powerline.readthedocs.org/en/master/installation/linux.html
+echo You need python-pip, then pip install --user powerline-status, then sort fonts
+
 source ~/.bashrc
