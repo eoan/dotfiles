@@ -1,0 +1,62 @@
+#!/usr/bin/env ruby
+
+require 'optparse'
+require 'fileutils'
+require 'open-uri'
+
+options = {}
+
+opts = OptionParser.new do |o|
+  o.on("--clean","Delete everything before re-cloning") do
+    options[:clean] = true
+  end
+end
+opts.parse!
+
+git_bundles = [
+  "https://github.com/bling/vim-airline.git",
+  "https://github.com/ntpeters/vim-airline-colornum.git",
+  "https://github.com/bling/vim-bufferline.git",
+  "https://github.com/kien/ctrlp.vim.git",
+  "https://github.com/tpope/vim-fugitive.git",
+  "https://github.com/vim-scripts/FuzzyFinder.git",
+  "https://github.com/sjl/gundo.vim.git",
+  "https://github.com/vim-scripts/L9.git",
+  "https://github.com/xolox/vim-lua-ftplugin.git",
+  "https://github.com/xolox/vim-misc.git",
+  "https://github.com/msanders/snipmate.vim.git",
+  "https://github.com/scrooloose/syntastic.git",
+  "https://github.com/farseer90718/vim-taskwarrior.git",
+  "https://github.com/Shougo/unite.vim.git",
+  "https://github.com/vim-latex/vim-latex.git",
+  "https://github.com/osyo-manga/vim-over.git",
+  "https://github.com/mikewest/vimroom.git",
+  "https://github.com/vimwiki/vimwiki.git",
+  # add more here
+]
+
+bundles_dir = File.join(File.dirname(__FILE__), "bundle")
+
+FileUtils.cd(bundles_dir)
+
+if options[:clean]
+  puts "Trashing everything (lookout!)"
+  Dir["*"].each do |d|
+    FileUtils.rm_rf d
+  end
+end
+
+git_bundles.each do |url|
+  dir = url.split('/').last.sub(/\.git$/, '')
+  if File.exists?(dir)
+    puts "  Skipping #{dir}, as it already exists"
+  else
+    puts "  Unpacking #{url} into #{dir}"
+    `git clone #{url} #{dir}`
+    if $?.success?
+      FileUtils.rm_rf(File.join(dir, ".git"))
+    else
+      STDERR.puts "Problem with #{url}"
+    end
+  end
+end
