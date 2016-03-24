@@ -289,7 +289,7 @@ function! TabOut()
 		inoremap <tab> <C-o>:call TabOut()<CR>
 	endif
 endfunction
-"IBROKETHIS"inoremap <tab> <C-o>:call TabOut()<CR>
+inoremap <tab> <C-o>:call TabOut()<CR>
 "*****nmap <tab> <tab>
 "Snipmate may cause a conflict with TabOut() - edit
 "/home/aj/.vim/bundle/snipmate.vim/after/plugin/snipMate.vim and
