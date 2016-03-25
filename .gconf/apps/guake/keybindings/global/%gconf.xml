@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="show_hide" mtime="1430587458" type="string">
+		<stringvalue>Pause</stringvalue>
+	</entry>
+</gconf>

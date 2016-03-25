@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="close_tab" mtime="1438178232" type="string">
+		<stringvalue>&lt;Primary&gt;&lt;Shift&gt;t</stringvalue>
+	</entry>
+	<entry name="new_tab" mtime="1436312966" type="string">
+		<stringvalue>&lt;Primary&gt;t</stringvalue>
+	</entry>
+	<entry name="previous_tab" mtime="1436312910" type="string">
+		<stringvalue>&lt;Primary&gt;grave</stringvalue>
+	</entry>
+</gconf>
