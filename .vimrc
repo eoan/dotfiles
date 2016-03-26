@@ -28,8 +28,9 @@ set vi+=n~/.viminfo
 " Yank from cursor to end of line, to be consistent with C and D
 nnoremap Y y$
 
-" Set British English as default
+" Set British English as default and location of words file
 set spelllang=en_gb
+set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 
 " Set blowfish as the default encryption
 set cm=blowfish
