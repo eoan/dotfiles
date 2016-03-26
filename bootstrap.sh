@@ -7,12 +7,7 @@ olddir=~/dotfiles_old	# old dotfiles backup directory
 exdirs="
 	.config/awesome
 	.moc/themes
-	.gconf/apps/guake/general
-	.gconf/apps/guake/keybindings/global
-	.gconf/apps/guake/keybindings/local
-	.gconf/apps/guake/style/background
-	.gconf/apps/guake/style/font
-	.conky-google-now
+	.gconf/apps/guake
 	"		# list of extra directories to create
 files="
 	.bashrc
@@ -22,14 +17,7 @@ files="
 	.config/awesome/rc.lua
 	.moc/config
 	.moc/themes/ajtrans
-	.gconf/apps/guake/%gconf.xml
-	.gconf/apps/guake/general/%gconf.xml
-	.gconf/apps/guake/keybindings/%gconf.xml
-	.gconf/apps/guake/keybindings/global/%gconf.xml
-	.gconf/apps/guake/keybindings/local/%gconf.xml
-	.gconf/apps/guake/style/%gconf.xml
-	.gconf/apps/guake/style/background/%gconf.xml
-	.gconf/apps/guake/style/font/%gconf.xml
+	.gconf/apps/guake
 	.conkyrc
 	conkyawcal.sh
 	conkygcal.sh
