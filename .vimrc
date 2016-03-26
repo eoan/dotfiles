@@ -32,6 +32,11 @@ nnoremap Y y$
 set spelllang=en_gb
 set dictionary-=/usr/share/dict/words dictionary+=/usr/share/dict/words
 
+" Set shortcuts for thesaurus plugin
+nnoremap <leader>t :ThesaurusQueryReplaceCurrentWord<CR>
+inoremap <C-t> <C-o>:ThesaurusQueryReplaceCurrentWord<CR>
+
+
 " Set blowfish as the default encryption
 set cm=blowfish
 

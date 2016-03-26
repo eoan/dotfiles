@@ -32,6 +32,7 @@ git_bundles = [
   "https://github.com/osyo-manga/vim-over.git",
   "https://github.com/mikewest/vimroom.git",
   "https://github.com/vimwiki/vimwiki.git",
+  "https://github.com/Ron89/thesaurus_query.vim.git"
   # add more here
 ]
 
