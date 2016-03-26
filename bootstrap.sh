@@ -33,57 +33,7 @@ files="
 	.conkyrc
 	conkyawcal.sh
 	conkygcal.sh
-	.conky-google-now/0.png
-	.conky-google-now/1.png
-	.conky-google-now/2.png
-	.conky-google-now/3.png
-	.conky-google-now/4.png
-	.conky-google-now/5.png
-	.conky-google-now/6.png
-	.conky-google-now/7.png
-	.conky-google-now/8.png
-	.conky-google-now/9.png
-	.conky-google-now/10.png
-	.conky-google-now/11.png
-	.conky-google-now/12.png
-	.conky-google-now/13.png
-	.conky-google-now/14.png
-	.conky-google-now/15.png
-	.conky-google-now/16.png
-	.conky-google-now/17.png
-	.conky-google-now/18.png
-	.conky-google-now/19.png
-	.conky-google-now/20.png
-	.conky-google-now/21.png
-	.conky-google-now/22.png
-	.conky-google-now/23.png
-	.conky-google-now/24.png
-	.conky-google-now/25.png
-	.conky-google-now/26.png
-	.conky-google-now/27.png
-	.conky-google-now/28.png
-	.conky-google-now/29.png
-	.conky-google-now/30.png
-	.conky-google-now/31.png
-	.conky-google-now/32.png
-	.conky-google-now/33.png
-	.conky-google-now/34.png
-	.conky-google-now/35.png
-	.conky-google-now/36.png
-	.conky-google-now/37.png
-	.conky-google-now/38.png
-	.conky-google-now/39.png
-	.conky-google-now/40.png
-	.conky-google-now/41.png
-	.conky-google-now/42.png
-	.conky-google-now/43.png
-	.conky-google-now/44.png
-	.conky-google-now/45.png
-	.conky-google-now/46.png
-	.conky-google-now/47.png
-	.conky-google-now/3200.png
-	.conky-google-now/humidity.png
-	.conky-google-now/wind.png
+	.conky-google-now
 	"		# list of files/folders to symlink in homedir
 
 ##########
