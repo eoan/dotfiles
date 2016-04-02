@@ -197,7 +197,7 @@ function! Makepdf()
 		let output = "/home/aj/phd/output/" . expand('%:t:r') . ".pdf"
 		:w
 "		execute 'silent !pandoc --from markdown+subscript % --smart --bibliography=/home/aj/phd/citations/bib.bib --latex-engine=xelatex -o ' . output
-		execute 'silent !cat /home/aj/phd/.header.mkd % | pandoc --from markdown+subscript --smart --bibliography=/home/aj/phd/citations/bib.bib --latex-engine=xelatex -o ' . output
+		execute 'silent !cat /home/aj/phd/.header.mkd % /home/aj/phd/.footer.mkd | pandoc --from markdown+subscript --smart --bibliography=/home/aj/phd/citations/bib.bib --latex-engine=xelatex -o ' . output
 		execute 'redraw!'
 	else
 		:w
@@ -214,7 +214,7 @@ function! Makepdfaj()
 		let output = "/home/aj/phd/output/" . expand('%:t:r') . ".pdf"
 		:w
 "		execute 'silent !pandoc --smart --template=/home/aj/phd/styles/ajpdf --bibliography=/home/aj/phd/citations/bib.bib --latex-engine=xelatex % -o ' . output
-		execute 'silent !cat /home/aj/phd/.header.mkd % | pandoc --from markdown+subscript --smart --template=/home/aj/phd/styles/ajpdf --bibliography=/home/aj/phd/citations/bib.bib --latex-engine=xelatex -o ' . output
+		execute 'silent !cat /home/aj/phd/.header.mkd % /home/aj/phd/.footer.mkd | pandoc --from markdown+subscript --smart --template=/home/aj/phd/styles/ajpdf --bibliography=/home/aj/phd/citations/bib.bib --latex-engine=xelatex -o ' . output
 		execute 'redraw!'
 	else
 		:w
