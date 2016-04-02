@@ -20,6 +20,10 @@ autocmd BufReadPost *
      \   exe "normal! g`\"" |
      \ endif
 
+" Set tabs to equal four spaces when editing markdown/pandoc files
+autocmd FileType markdown setlocal ts=4 sts=4 sw=4 expandtab
+autocmd FileType pandoc setlocal ts=4 sts=4 sw=4 expandtab
+
 " Set up cache info thing - viminfo
 set vi=%,'50
 set vi+=\"100,:100
