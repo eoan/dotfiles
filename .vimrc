@@ -358,6 +358,24 @@ function! OpenPDF()
 endfunction
 
 command! OpenPDF call OpenPDF()
+
+" add better actionpoint to minutes
+"function! ActionPoints() 
+":execute "normal! o\**ACTION:  **"
+":call cursor(line('.'),col('.')-2)
+":startinsert
+"endfunction
+
+command! -nargs=* AA execute 'normal!o**ACTION: <args>.**'
+
+" add actionpoint to minutes
+function! ActionPoint() 
+	:execute "normal! o\**ACTION:  **"
+	:call cursor(line('.'),col('.')-2)
+	:startinsert
+endfunction
+
+command! ActionPoint call ActionPoint()
 " Extensions {{{1
 " Airline - tab support and powerline fonts
 let g:airline#extensions#tabline#enabled = 1
