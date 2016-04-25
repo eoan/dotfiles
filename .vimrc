@@ -366,7 +366,7 @@ command! OpenPDF call OpenPDF()
 ":startinsert
 "endfunction
 
-command! -nargs=* AA execute 'normal!o**ACTION: <args>.**'
+command! -nargs=* AA execute 'normal!o'|execute 'normal!o**ACTION: <args>.**'|execute 'normal!o'
 
 " add actionpoint to minutes
 function! ActionPoint() 
