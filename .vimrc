@@ -20,6 +20,10 @@ autocmd BufReadPost *
      \   exe "normal! g`\"" |
      \ endif
 
+" Set tabs to equal four spaces when editing markdown/pandoc files
+autocmd FileType markdown setlocal ts=4 sts=4 sw=4 expandtab
+autocmd FileType pandoc setlocal ts=4 sts=4 sw=4 expandtab
+
 " Set up cache info thing - viminfo
 set vi=%,'50
 set vi+=\"100,:100
@@ -193,7 +197,7 @@ function! Makepdf()
 		let output = "/home/aj/phd/output/" . expand('%:t:r') . ".pdf"
 		:w
 "		execute 'silent !pandoc --from markdown+subscript % --smart --bibliography=/home/aj/phd/citations/bib.bib --latex-engine=xelatex -o ' . output
-		execute 'silent !cat /home/aj/phd/.header.mkd % | pandoc --from markdown+subscript --smart --bibliography=/home/aj/phd/citations/bib.bib --latex-engine=xelatex -o ' . output
+		execute 'silent !cat /home/aj/phd/.header.mkd % /home/aj/phd/.footer.mkd | pandoc --from markdown+subscript --smart --bibliography=/home/aj/phd/citations/bib.bib --latex-engine=xelatex -o ' . output
 		execute 'redraw!'
 	else
 		:w
@@ -210,7 +214,7 @@ function! Makepdfaj()
 		let output = "/home/aj/phd/output/" . expand('%:t:r') . ".pdf"
 		:w
 "		execute 'silent !pandoc --smart --template=/home/aj/phd/styles/ajpdf --bibliography=/home/aj/phd/citations/bib.bib --latex-engine=xelatex % -o ' . output
-		execute 'silent !cat /home/aj/phd/.header.mkd % | pandoc --from markdown+subscript --smart --template=/home/aj/phd/styles/ajpdf --bibliography=/home/aj/phd/citations/bib.bib --latex-engine=xelatex -o ' . output
+		execute 'silent !cat /home/aj/phd/.header.mkd % /home/aj/phd/.footer.mkd | pandoc --from markdown+subscript --smart --template=/home/aj/phd/styles/ajpdf --bibliography=/home/aj/phd/citations/bib.bib --latex-engine=xelatex -o ' . output
 		execute 'redraw!'
 	else
 		:w
