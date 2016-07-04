@@ -10,7 +10,7 @@ Helptags
 " set .page files as type 'pandoc'
 autocmd BufNewFile,BufRead *.page set filetype=pandoc
 " conflict between snipmate and tabbing out of brackets?
-"
+
 " Switch off vi-compatibility mode
 set nocompatible
 
@@ -266,6 +266,8 @@ nmap - f.lr<CR>
 " replace opening/closing quote marks - added 'e' to ignore errors
 nmap _ :%s/“/"/ge<CR>:%s/”/"/ge<CR>:%s/‘/'/ge<CR>:%s/’/'/ge<CR>
 
+" TODO: macro to remove all line breaks, then change all full-stops with
+" full-stop<CR> -- to be used after c&p from pdf etc.
 " Brackets {{{2
 imap { {}<left>
 imap [ []<left>
@@ -363,23 +365,9 @@ endfunction
 
 command! OpenPDF call OpenPDF()
 
-" add better actionpoint to minutes
-"function! ActionPoints() 
-":execute "normal! o\**ACTION:  **"
-":call cursor(line('.'),col('.')-2)
-":startinsert
-"endfunction
-
+" add ActionPoint to minutes
 command! -nargs=* AA execute 'normal!o'|execute 'normal!o**ACTION: <args>.**'|execute 'normal!o'
 
-" add actionpoint to minutes
-function! ActionPoint() 
-	:execute "normal! o\**ACTION:  **"
-	:call cursor(line('.'),col('.')-2)
-	:startinsert
-endfunction
-
-command! ActionPoint call ActionPoint()
 " Extensions {{{1
 " Airline - tab support and powerline fonts
 let g:airline#extensions#tabline#enabled = 1
