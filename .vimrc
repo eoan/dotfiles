@@ -164,8 +164,18 @@ function! Notepad()
 endfunction
 nmap <leader>, :call Notepad()<CR>
 
-" Quickpaste
-nnoremap <leader>p "+p
+" Cut, copy, paste remaps
+nnoremap <leader>d "+d
+nnoremap <leader>y "+y
+nnoremap <leader>p :set paste<CR>"+gp:set nopaste<CR>
+nnoremap <leader>P :set paste<CR>"+gP:set nopaste<CR>
+vnoremap <leader>d "+d
+vnoremap <leader>y "+y
+vnoremap <leader>p <ESC><ESC>:set paste<CR>gv"+p:set nopaste<CR>
+vnoremap <leader>P <ESC><ESC>:set paste<CR>gv"+P:set nopaste<CR>
+inoremap <Leader>p <ESC>:set paste<CR>"+gp:set nopaste<CR>a
+inoremap <Leader>P <ESC>:set paste<CR>"+gp:set nopaste<CR>i
+
 
 " Move between buffers
 nnoremap <leader>. :bn<CR>
