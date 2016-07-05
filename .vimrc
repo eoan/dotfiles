@@ -406,9 +406,8 @@ let g:Tex_MultipleCompileFormats='pdf, aux'
 " Disable conversion of " to `` etc. by latex-suite
 let g:Tex_SmartKeyQuote = 0
 
-" c&p from reddit about vim-over
-nnoremap g/r :<c-u>OverCommandLine<cr>%s/
-xnoremap g/r :<c-u>OverCommandLine<cr>%s/\%V
+" trigger overcommandline
+nnoremap <Leader>o :OverCommandLine<cr>%s/
 
 " Fuzzy finder remaps
 nmap ,f :FufFileWithCurrentBufferDir<CR>
