@@ -38,6 +38,7 @@ echo "Creating extra directories"
 for exdir in $exdirs; do
 	tbp=$olddir/$exdir
 	mkdir -p $tbp
+	mkdir -p ~/$exdir
 	echo "Created $exdir"
 done
 echo "...done"
