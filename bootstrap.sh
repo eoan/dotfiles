@@ -6,6 +6,7 @@ dir=~/dotfiles		# dotfiles directory
 olddir=~/dotfiles_old	# old dotfiles backup directory
 exdirs="
 	.config/awesome
+	.config/albert
 	.moc/themes
 	.gconf/apps/guake
 	"		# list of extra directories to create
@@ -15,6 +16,7 @@ files="
 	.vimrc
 	.vim
 	.config/awesome/rc.lua
+	.config/albert/albert.conf
 	.moc/config
 	.moc/themes/ajtrans
 	.gconf/apps/guake
