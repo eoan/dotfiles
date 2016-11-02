@@ -116,6 +116,10 @@ sudo wget http://download.teamviewer.com/download/teamviewer_i386.deb
 sudo dpkg -i teamviewer_i386.deb
 sudo apt-get -fy install
 
+#install atom
+sudo wget -O atom-amd64.deb https://atom.io/download/deb
+sudo dpkg -i atom-amd64.deb
+
 #install torguard
 sudo wget http://updates.torguard.biz/Software/Linux/torguard-latest-amd64.deb
 sudo dpkg -i torguard-latest-amd64.deb
