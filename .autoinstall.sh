@@ -152,6 +152,9 @@ mkdir -p ~/.config/fontconfig/conf.d/
 mv -v 10-powerline-symbols.conf ~/.config/fontconfig/conf.d/
 cd
 
+#check for missing dependencies
+sudo apt-get -fy install
+
 #echo todo list
 echo ‘system76-driver-nvidia \’
 echo “get http://www.googleplaymusicdesktopplayer.com/”
