@@ -1,3 +1,8 @@
+#test for sudo
+if [ -z $SUDO_USER ]; then
+    echo "You need to run this script with sudo."; exit 1
+fi
+
 #set up log
 exec >> autoinstall-log.txt
 
