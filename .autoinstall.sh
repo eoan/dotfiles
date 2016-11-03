@@ -161,7 +161,7 @@ echo “get http://www.googleplaymusicdesktopplayer.com/”
 echo “mailutils should be installed”
 
 #change ownership of sudo-created files to $USER
-sudo chown -Rv $USER:$USER .
+sudo chown -Rv $SUDO_USER:$SUDO_USER .
 
 #note packages autoinstalled so I can diff from it later
 dpkg --get-selections > autoinstall/autoinstalled-packages
