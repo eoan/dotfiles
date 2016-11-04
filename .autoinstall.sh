@@ -85,7 +85,7 @@ texmaker \
 tmux \
 unity-tweak-tool \
 unrar \
-vim-nox \
+vim-nox-py2 \
 virtualbox \
 vlc \
 xclip \
