@@ -378,6 +378,30 @@ command! OpenPDF call OpenPDF()
 " add ActionPoint to minutes
 command! -nargs=* AA execute 'normal!o'|execute 'normal!o**ACTION: <args>.**'|execute 'normal!o'
 
+" Email Sallies Minutes
+function! EmailMinutes() 
+
+	execute 'silent call Makepdfaj()'
+	let mytime = strftime("%d/%m/%Y") 
+	execute 'silent !echo | mail -s "Meeting minutes ' . mytime . '" -a ' . expand('%:r') . '.pdf sswarden@st-andrews.ac.uk,aw201@st-andrews.ac.uk,jk86@st-andrews.ac.uk,kc347@st-andrews.ac.uk'
+	execute 'redraw!'
+endfunction
+
+" Trigger this function from a command
+command! EmailMinutes execute 'silent call EmailMinutes()'
+
+" Demo Email Minutes
+function! DemoEmailMinutes() 
+
+	execute 'silent call Makepdfaj()'
+	let mytime = strftime("%d/%m/%Y") 
+	execute 'silent !echo | mail -s "Demo meeting minutes ' . mytime . '" -a ' . expand('%:r') . '.pdf ah21@st-andrews.ac.uk'
+	execute 'redraw!'
+endfunction
+
+" Trigger this function from a command
+command! DemoEmailMinutes execute 'silent call DemoEmailMinutes()'
+
 " Extensions {{{1
 " Airline - tab support and powerline fonts
 let g:airline#extensions#tabline#enabled = 1
