@@ -18,6 +18,14 @@ files="
 	.conky-google-now
 	.conkyrc
 	.gconf/apps/guake
+	.local/share/fonts/Bembo\ Book\ MT\ Std\ Bold.otf
+	.local/share/fonts/Bembo\ Book\ MT\ Std\ Italic.otf
+	.local/share/fonts/Bembo\ Book\ MT\ Stf\ Regular.otf
+	.local/share/fonts/Roboto-Black.ttf
+	.local/share/fonts/Roboto-BlackItalic.ttf
+	.local/share/fonts/Roboto-Bold.ttf
+	.local/share/fonts/Roboto-Medium.ttf
+	.local/share/fonts/ufonts.com_gillsans.ttf
 	.moc/config
 	.moc/themes/ajtrans
 	.vim
