@@ -5,25 +5,25 @@
 dir=~/dotfiles		# dotfiles directory
 olddir=~/dotfiles_old	# old dotfiles backup directory
 exdirs="
-	.config/awesome
 	.config/albert
-	.moc/themes
+	.config/awesome
 	.gconf/apps/guake
+	.moc/themes
 	"		# list of extra directories to create
 files="
 	.bashrc
 	.bash_aliases
-	.vimrc
-	.vim
-	.config/awesome/rc.lua
 	.config/albert/albert.conf
+	.config/awesome/rc.lua
+	.conky-google-now
+	.conkyrc
+	.gconf/apps/guake
 	.moc/config
 	.moc/themes/ajtrans
-	.gconf/apps/guake
-	.conkyrc
+	.vim
+	.vimrc
 	conkyawcal.sh
 	conkygcal.sh
-	.conky-google-now
 	"		# list of files/folders to symlink in homedir
 
 ##########
