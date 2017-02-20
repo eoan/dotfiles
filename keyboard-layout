@@ -54,7 +54,7 @@
 #
 #Scripted version of above:
 
-
+sudo cp /usr/share/X11/xkb/symbols/gb /usr/share/X11/xkb/symbols/gb-backup
 sudo sed -i '/English (UK, Colemak)/a \ \n\ \ \ \ key <AE08> { [ comma, period ] };\n\ \ \ \ key <AE09> { [ less, greater ] };' /usr/share/X11/xkb/symbols/gb
 sudo sed -i 's/us(colemak)/latin/' /usr/share/X11/xkb/symbols/gb
 sudo dpkg-reconfigure xkb-data
