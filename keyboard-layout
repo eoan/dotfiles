@@ -35,7 +35,8 @@ xkb_symbols "colemak" {
     key <BKSL>	{ [numbersign, asciitilde,   dead_grave,   dead_breve ]	};
     key <LSGT>	{ [ backslash,        bar,          bar,    brokenbar ]	};
     key <AB08>  { [     comma,	period		]	};
-
+    key <AB09>  { [     less,	greater		]	};
+    
     include "level3(ralt_switch_multikey)"
 };
 
