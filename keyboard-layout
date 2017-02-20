@@ -39,4 +39,8 @@ xkb_symbols "colemak" {
     include "level3(ralt_switch_multikey)"
 };
 
-and add English (UK, Colemak) to settings > text entry
+run:
+
+sudo dpkg-reconfigure xkb-data
+
+and add English (UK, Colemak) to settings > text entry.
