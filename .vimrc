@@ -7,7 +7,7 @@ syntax on
 filetype plugin indent on
 Helptags
 
-" set .page files as type 'pandoc'
+" Set .page files as type 'pandoc'
 autocmd BufNewFile,BufRead *.page set filetype=pandoc
 " conflict between snipmate and tabbing out of brackets?
 
@@ -83,7 +83,7 @@ set cursorline
 " Keep current line centered
 set so=99
 
-" show matching brackets
+" Show matching brackets
 set showmatch
 
 " Set crazy Enter-search-highlight thing
@@ -271,9 +271,9 @@ vmap <C-Down> xp'[V']
 
 " Macros {{{2
 
-" split line at next full-stop
+" Split line at next full-stop
 nmap - f.lr<CR>
-" replace opening/closing quote marks - added 'e' to ignore errors
+" Replace opening/closing quote marks - added 'e' to ignore errors
 nmap _ :%s/“/"/ge<CR>:%s/”/"/ge<CR>:%s/‘/'/ge<CR>:%s/’/'/ge<CR>
 
 " TODO: macro to remove all line breaks, then change all full-stops with
@@ -288,12 +288,12 @@ inoremap " ""<left>
 function! TabOut()
 	let current_char = getline('.')[col('.')-1]
 	if match(current_char,')\|"\|]\|}') == 0
-""		call cursor(line('.'),col('.')+1)
+"		call cursor(line('.'),col('.')+1)
 		if col('.') == col("$")-1
-""			:execute "normal! a\ Monkey!"
+"			:execute "normal! a\ Monkey!"
 			:startinsert!
 		else
-""			:execute "normal! a\ Monkey2!"
+"			:execute "normal! a\ Monkey2!"
 			:call cursor(line('.'),col('.')+1)
 			:startinsert
 		endif
@@ -313,7 +313,7 @@ function! TabOut()
 endfunction
 inoremap <tab> <C-o>:call TabOut()<CR>
 "*****nmap <tab> <tab>
-"Snipmate may cause a conflict with TabOut() - edit
+" Snipmate may cause a conflict with TabOut() - edit
 "/home/aj/.vim/bundle/snipmate.vim/after/plugin/snipMate.vim and
 "change ino <tab> <c-r>=TriggerSnippet()<cr> and
 "snor <tab> <esc>i<right><c-r>=TriggerSnippet()<cr>
@@ -324,7 +324,7 @@ inoremap <tab> <C-o>:call TabOut()<CR>
 function! EnterOut()
 	let current_char = getline('.')[col('.')-1]
 	if match(current_char,')\|"\|\]\|}') == 0
-""		call cursor(line('.'),col('.')+2)
+"		call cursor(line('.'),col('.')+2)
 		if col('.') == 1
 			:execute "normal! i\n"
 			:startinsert
@@ -345,9 +345,9 @@ function! EnterOut()
 			:execute "normal! i\n"
 			:startinsert
 		else
-""			call cursor(line('.'),col('.'))
+"			call cursor(line('.'),col('.'))
 			:execute "normal! i\n"
-""			call cursor(line('.'),col('.')+1)
+"			call cursor(line('.'),col('.')+1)
 			:startinsert
 		endif
 		inoremap <ENTER> <C-o>:call EnterOut()<CR>
@@ -355,13 +355,16 @@ function! EnterOut()
 endfunction
 inoremap <ENTER> <C-o>:call EnterOut()<CR>
 " Commands {{{1
-" create a .page file for citations
+" Create a .page file for citations
 command! -nargs=1 Cite wincmd l|wincmd k|:e /home/aj/phd/citations/<args>.page
-" update bib.bib file
+
+" Update bib.bib file
 command! Makebib execute 'silent !sh ~/phd/.makebib.sh'|redraw!
-" edit header file
+
+" Edit header file
 command! EditHeader wincmd l|wincmd j|:e /home/aj/phd/.header.mkd
-" open pdf output
+
+" Open pdf output
 function! OpenPDF()
 	let file_loc = fnamemodify(expand('%'), ":p:h:h")
 	if match(file_loc,'/home/aj/phd') == 0
@@ -373,9 +376,10 @@ function! OpenPDF()
 	endif
 endfunction
 
+" Trigger this function from a command
 command! OpenPDF call OpenPDF()
 
-" add ActionPoint to minutes
+" Add ActionPoint to minutes
 command! -nargs=* AA execute 'normal!o'|execute 'normal!o**ACTION: <args>.**'|execute 'normal!o'
 
 " Email Sallies Minutes
@@ -427,7 +431,7 @@ nnoremap <F5> :GundoToggle<CR>
 " vimroom remap
 nnoremap <Leader>vr :VimroomToggle<CR>
 
-" fiddle with grep for the latex add-on and do a couple of formatting things
+" Fiddle with grep for the latex add-on and do a couple of formatting things
 set grepprg=grep\ -nH\ $*
 "filetype on
 "filetype plugin on
@@ -440,7 +444,7 @@ let g:Tex_MultipleCompileFormats='pdf, aux'
 " Disable conversion of " to `` etc. by latex-suite
 let g:Tex_SmartKeyQuote = 0
 
-" trigger overcommandline
+" Trigger overcommandline
 nnoremap <Leader>o :OverCommandLine<cr>%s/
 
 " Fuzzy finder remaps
