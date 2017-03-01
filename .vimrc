@@ -402,6 +402,16 @@ endfunction
 " Trigger this function from a command
 command! DemoEmailMinutes execute 'silent call DemoEmailMinutes()'
 
+" Join all lines, make all sentence-breaks one space, then insert linebreaks
+function! MagicReformat()
+	%j
+	%s/\.  /\. /g
+	%s/\. /\.\r/g
+endfunc
+
+" Trigger this function from a command
+command! MagicReformat call MagicReformat()
+
 " Extensions {{{1
 " Airline - tab support and powerline fonts
 let g:airline#extensions#tabline#enabled = 1
