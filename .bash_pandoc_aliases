@@ -2,29 +2,29 @@ Makepdf() {
 FullFileName=$(basename $1)
 FileName="${FullFileName%.*}"
 Extension="${FullFileName##*.}"
-pandoc $FullFileName --from markdown+subscript --smart --bibliography=/home/aj/phd/citations/bib.bib --latex-engine=xelatex -o $FileName.pdf
+pandoc $FullFileName --from markdown+subscript --smart --bibliography=$HOME/phd/citations/bib.bib --latex-engine=xelatex -o $FileName.pdf
 }
 Makepdfaj() {
 FullFileName=$(basename $1)
 FileName="${FullFileName%.*}"
 Extension="${FullFileName##*.}"
-pandoc $FullFileName --from markdown+subscript --smart --template=/home/aj/phd/styles/ajpdf --bibliography=/home/aj/phd/citations/bib.bib --latex-engine=xelatex -o $FileName.pdf
+pandoc $FullFileName --from markdown+subscript --smart --template=$HOME/phd/styles/ajpdf --bibliography=$HOME/phd/citations/bib.bib --latex-engine=xelatex -o $FileName.pdf
 }
 PhDpdf() {
 FullFileName=$(basename $1)
 FileName="${FullFileName%.*}"
 Extension="${FullFileName##*.}"
-cat /home/aj/phd/.header-final.mkd $FullFileName /home/aj/phd/.footer.mkd | pandoc --from markdown+subscript --smart --bibliography=/home/aj/phd/citations/bib.bib --latex-engine=xelatex -o $FileName.pdf
+cat $HOME/phd/.header-final.mkd $FullFileName $HOME/phd/.footer.mkd | pandoc --from markdown+subscript --smart --bibliography=$HOME/phd/citations/bib.bib --latex-engine=xelatex -o $FileName.pdf
 }
 PhDpdfaj() {
 FullFileName=$(basename $1)
 FileName="${FullFileName%.*}"
 Extension="${FullFileName##*.}"
-cat /home/aj/phd/.header-final.mkd $FullFileName /home/aj/phd/.footer.mkd | pandoc --from markdown+subscript --smart --template=/home/aj/phd/styles/ajpdf --bibliography=/home/aj/phd/citations/bib.bib --latex-engine=xelatex -o $FileName.pdf
+cat $HOME/phd/.header-final.mkd $FullFileName $HOME/phd/.footer.mkd | pandoc --from markdown+subscript --smart --template=$HOME/phd/styles/ajpdf --bibliography=$HOME/phd/citations/bib.bib --latex-engine=xelatex -o $FileName.pdf
 }
 PhDpdfSegment() {
 FullFileName=$(basename $1)
 FileName="${FullFileName%.*}"
 Extension="${FullFileName##*.}"
-cat /home/aj/phd/restructure/.header.mkd /home/aj/phd/restructure/.front.mkd $1 /home/aj/phd/restructure/.footer.mkd | sed 's/\\newif/\\begin{comment}\\newif/' | sed 's/\\mainmatter/\\end{comment}\\mainmatter/' | sed 's/\\ifsubmit\\else\\DoubleSpacing\\fi/\\DoubleSpacing\\setcounter{chapter}{DuMmYtExT}/' | sed s/DuMmYtExT/$2/ | pandoc --from markdown+subscript --smart --template=/home/aj/phd/styles/ajpdf --bibliography=/home/aj/phd/citations/bib.bib --latex-engine=xelatex -o $FileName.pdf -V documentclass=memoir
+cat $HOME/phd/restructure/.header.mkd $HOME/phd/restructure/.front.mkd $1 $HOME/phd/restructure/.footer.mkd | sed 's/\\newif/\\begin{comment}\\newif/' | sed 's/\\mainmatter/\\end{comment}\\mainmatter/' | sed 's/\\ifsubmit\\else\\DoubleSpacing\\fi/\\DoubleSpacing\\setcounter{chapter}{DuMmYtExT}/' | sed s/DuMmYtExT/$2/ | pandoc --from markdown+subscript --smart --template=$HOME/phd/styles/ajpdf --bibliography=$HOME/phd/citations/bib.bib --latex-engine=xelatex -o $FileName.pdf -V documentclass=memoir
 }
