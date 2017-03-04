@@ -170,3 +170,6 @@ complete -F _apparix_aliases to
 
 # coloured prompt
 export PS1="\[\e[0;33m\]\u@\h:\w$ \[\e[m\]"
+
+# add pandoc bash aliases
+    . ~/.bash_pandoc_aliases
