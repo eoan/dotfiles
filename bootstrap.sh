@@ -13,6 +13,7 @@ exdirs="
 files="
 	.bashrc
 	.bash_aliases
+	.bash_pandoc_aliases
 	.config/albert/albert.conf
 	.config/awesome/rc.lua
 	.conky-google-now
