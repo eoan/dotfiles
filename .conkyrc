@@ -72,6 +72,9 @@ ${voffset}
 Duty Rota ${voffset -1} ${color7}${hr}${color}
 ${execpi 300 sh ~/conkyawcal.sh}
 ${voffset}
+GY Laundry ${voffset -2} ${color7}${hr}${color}
+${execpi 120 sh ~/conkylaundry.sh}
+${voffset}
 #Duty Rota ${voffset -1} ${color7}${hr}${color}
 #${font Open Sans Light:size=12}${execpi 300 sh ~/conkyawcal2.sh}
 #${font Open Sans Light:size=10}${voffset}
