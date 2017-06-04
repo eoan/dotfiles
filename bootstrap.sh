@@ -33,6 +33,7 @@ files="
 	.vimrc
 	conkyawcal.sh
 	conkygcal.sh
+	conkylaundry.sh
 	"		# list of files/folders to symlink in homedir
 
 ##########
