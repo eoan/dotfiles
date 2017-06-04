@@ -73,7 +73,9 @@ Duty Rota ${voffset -1} ${color7}${hr}${color}
 ${execpi 300 sh ~/conkyawcal.sh}
 ${voffset}
 GY Laundry ${voffset -2} ${color7}${hr}${color}
-${execpi 120 sh ~/conkylaundry.sh}
+${if_match "${execpi 120 sh ~/conkylaundry.sh}" == "0 washers available"}${font Open Sans:size=9}${color #cc0000}No washers available${color #FFFFFF}${voffset -30}${font}${endif}
+${if_match "${execpi 120 sh ~/conkylaundry.sh}" == "1 washers available"}${voffset -15}${font Open Sans:size=9}One washer available${font}${voffset -15}${endif}
+${if_match "${execpi 120 sh ~/conkylaundry.sh}" == "2 washers available"}${voffset -30}${font Open Sans:size=9}Two washers available${font}${endif}
 ${voffset}
 #Duty Rota ${voffset -1} ${color7}${hr}${color}
 #${font Open Sans Light:size=12}${execpi 300 sh ~/conkyawcal2.sh}
