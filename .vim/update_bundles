@@ -22,7 +22,7 @@ git_bundles = [
   "https://github.com/vim-scripts/L9.git",
   "https://github.com/msanders/snipmate.vim.git",
   "https://github.com/scrooloose/syntastic.git",
-  "https://github.com/Ron89/thesaurus_query.vim.git"
+  "https://github.com/Ron89/thesaurus_query.vim.git",
   "https://github.com/Shougo/unite.vim.git",
   "https://github.com/bling/vim-airline.git",
   "https://github.com/ntpeters/vim-airline-colornum.git",
