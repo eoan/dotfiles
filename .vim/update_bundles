@@ -32,6 +32,7 @@ git_bundles = [
   "https://github.com/tpope/vim-fugitive.git",
   "https://github.com/vim-latex/vim-latex.git",
   "https://github.com/xolox/vim-lua-ftplugin.git",
+  "https://github.com/nelstrom/vim-markdown-folding.git",
   "https://github.com/xolox/vim-misc.git",
   "https://github.com/osyo-manga/vim-over.git",
   "https://github.com/junegunn/vim-peekaboo.git",
