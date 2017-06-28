@@ -28,6 +28,7 @@ git_bundles = [
   "https://github.com/ntpeters/vim-airline-colornum.git",
   "https://github.com/vim-airline/vim-airline-themes.git",
   "https://github.com/bling/vim-bufferline.git",
+  "https://github.com/flazz/vim-colorschemes.git",
   "https://github.com/tpope/vim-fugitive.git",
   "https://github.com/vim-latex/vim-latex.git",
   "https://github.com/xolox/vim-lua-ftplugin.git",
