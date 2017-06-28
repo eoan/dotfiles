@@ -14,27 +14,29 @@ end
 opts.parse!
 
 git_bundles = [
-  "https://github.com/bling/vim-airline.git",
-  "https://github.com/ntpeters/vim-airline-colornum.git",
-  "https://github.com/bling/vim-bufferline.git",
+  "https://github.com/itchyny/calendar.vim.git",
+  "https://github.com/mcandre/Conque-Shell.git",
   "https://github.com/kien/ctrlp.vim.git",
-  "https://github.com/tpope/vim-fugitive.git",
   "https://github.com/vim-scripts/FuzzyFinder.git",
   "https://github.com/sjl/gundo.vim.git",
   "https://github.com/vim-scripts/L9.git",
-  "https://github.com/xolox/vim-lua-ftplugin.git",
-  "https://github.com/xolox/vim-misc.git",
   "https://github.com/msanders/snipmate.vim.git",
   "https://github.com/scrooloose/syntastic.git",
-  "https://github.com/farseer90718/vim-taskwarrior.git",
-  "https://github.com/Shougo/unite.vim.git",
-  "https://github.com/vim-latex/vim-latex.git",
-  "https://github.com/osyo-manga/vim-over.git",
-  "https://github.com/mikewest/vimroom.git",
-  "https://github.com/vimwiki/vimwiki.git",
-  "https://github.com/mcandre/Conque-Shell.git",
-  "https://github.com/junegunn/vim-peekaboo.git",
   "https://github.com/Ron89/thesaurus_query.vim.git"
+  "https://github.com/Shougo/unite.vim.git",
+  "https://github.com/bling/vim-airline.git",
+  "https://github.com/ntpeters/vim-airline-colornum.git",
+  "https://github.com/vim-airline/vim-airline-themes.git",
+  "https://github.com/bling/vim-bufferline.git",
+  "https://github.com/tpope/vim-fugitive.git",
+  "https://github.com/vim-latex/vim-latex.git",
+  "https://github.com/xolox/vim-lua-ftplugin.git",
+  "https://github.com/xolox/vim-misc.git",
+  "https://github.com/osyo-manga/vim-over.git",
+  "https://github.com/junegunn/vim-peekaboo.git",
+  "https://github.com/mikewest/vimroom.git",
+  "https://github.com/farseer90718/vim-taskwarrior.git",
+  "https://github.com/vimwiki/vimwiki.git",
   # add more here
 ]
 
