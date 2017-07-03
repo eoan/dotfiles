@@ -24,6 +24,23 @@ autocmd BufReadPost *
 autocmd FileType markdown setlocal ts=4 sts=4 sw=4 expandtab
 autocmd FileType pandoc setlocal ts=4 sts=4 sw=4 expandtab
 
+" Include bibtags file in dictionary completion when editing markdown/pandoc
+" files
+autocmd FileType markdown setlocal iskeyword+=@-@
+autocmd FileType markdown setlocal dictionary+=/home/aj/phd/citations/bibtags
+autocmd FileType pandoc setlocal iskeyword+=@-@
+autocmd FileType pandoc setlocal dictionary+=/home/aj/phd/citations/bibtags
+
+" Remap @@ to trigger bib dictionary completion when editing markdown/pandoc
+" files
+autocmd FileType markdown imap @@ @<C-x><C-k>
+autocmd FileType pandoc imap @@ @<C-x><C-k>
+
+" Remap @<space> to trigger bib dictionary completion after typing some
+" characters e.g. @coh@<space> when editing markdown/pandoc files
+autocmd FileType markdown imap @<space> <C-x><C-k>
+autocmd FileType pandoc imap @<space> <C-x><C-k>
+
 " Set up cache info thing - viminfo
 set vi=%,'50
 set vi+=\"100,:100
