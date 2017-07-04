@@ -127,6 +127,9 @@ imap jj <Esc>
 " Map spacebar to colon
 nmap <space> :
 
+" Lose 'Line-Undo' to remap redo <C-r> to U
+nnoremap U <C-r>
+
 " Home/End/TOS/BOS/join/search man remaps
 nnoremap H 0
 nnoremap L $
