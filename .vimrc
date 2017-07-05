@@ -322,8 +322,9 @@ function! TabOut()
 		if col('.') == col("$")-1
 			:normal A	
 			:startinsert!
+		elseif col('.') == 1
+			:normal i	
 		else
-			call cursor(line('.'),col('.')+1)
 			:normal i	
 			call cursor(line('.'),col('.')+1)
 			:startinsert
