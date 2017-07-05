@@ -57,6 +57,7 @@ snippet misc
 	@Misc{ `Filename('', 'id')`,
 		author = {${1:authors separated by "and"}},
 		title = {${2:title}},
+		year = `fnamemodify(expand('%'), ':t:gs?\(\w\+\)\(\d\{4\}\)\(\S\+\)?\2?')`,
 	}
 snippet phd
 	~~~~~{.bib}
